@@ -77,12 +77,12 @@
                 <div data-i18n="Report">Report</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item active">
+                <li class="menu-item">
                   <a href="temperature.html" class="menu-link">
                     <div data-i18n="Temperature">Temperature</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="fuel-drain.html" class="menu-link">
                     <div data-i18n="Fuel">Fuel</div>
                   </a>
@@ -343,13 +343,13 @@
                   <div class="nav-align-top mb-4">
                     <ul class="nav gap-3">
                       <li class="nav-item">
-                        <a href="temperature.html" class="btn btn-outline-secondary active">Temperature Log</a>
+                        <a href="fuel-drain.html" class="btn btn-outline-secondary">Fuel Drain</a>
                       </li>
                       <li class="nav-item">
-                        <a href="temperature-daily-report.html" class="btn btn-outline-secondary">Temperature Daily Report</a>
+                        <a href="fuel-consumtion.html" class="btn btn-outline-secondary active">Fuel Consumption</a>
                       </li>
                       <li class="nav-item">
-                        <a href="live-monitor.html" class="btn btn-outline-secondary">Live Monitor</a>
+                        <a href="fuel-dashbord.html" class="btn btn-outline-secondary">Fuel Dashboard</a>
                       </li>
                     </ul>
                   </div>
@@ -383,45 +383,6 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-danger rounded">
-                                    <i class="ti ti-minus ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Min</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">-3</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-success rounded">
-                                    <i class="ti ti-plus ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Max</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">+3</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-facebook rounded">
-                                    <i class="ti ti-equal ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Avarage</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">3</p>
-                              </div>
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -438,157 +399,101 @@
                               </select>
                             </div>
                           </div>
-                          <div class="col-md-6">
-                            <label class="form-label">interval munite</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-6">
-                            <label class="form-label">Start Point</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-6">
-                            <label class="form-label">End Point</label>
-                            <input type="text" class="form-control" />
-                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="card p-4 shadow-one rounded-2 card-datatable table-responsive mb-4">
                     <div class="d-flex align-items-center gap-2 justify-content-between mb-4">
-                      <h3 class="mb-0">Temperature Log</h3>
+                      <h3 class="mb-0">Fuel Consumtion</h3>
                       <div id="reportrange" class="d-flex form-control w-auto"><i class="ti ti-calendar"></i>&nbsp; <span></span> <i class="ti ti-caret-down"></i></div>
                     </div>
-                    <table class="table" id="example">
+                    <table class="table custom-table table-bordered" id="example">
                       <thead>
                         <tr>
-                          <th>Date & Time</th>
-                          <th>Temperature</th>
-                          <th>Humanity</th>
-                          <th>Engine</th>
-                          <th>Ac</th>
-                          <th>Door</th>
+                          <th>Vehicle</th>
+                          <th>Distance</th>
+                          <th>Running</th>
+                          <th>Idle</th>
+                          <th>Work Hour</th>
+                          <th>Start Fuel Level</th>
+                          <th>Average Speed</th>
+                          <th>Max Speed</th>
+                          <th>Fill</th>
+                          <th>No of Fill</th>
+                          <th>Drain</th>
+                          <th>No of Drain</th>
+                          <th>End Fuel Level</th>
+                          <th>Consumpt ion</th>
+                          <th>Consumpt ion / 100</th>
+                          <th>Total Load(t)</th>
+                          <th>Mileage Based on Distance</th>
+                          <th>Mileage Based on Duration</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
+                          <td>Toyota</td>
+                          <td>1233</td>
                           <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
+                          <td><span class="badge bg-label-success rounded p-2">Yes</span></td>
+                          <td><span class="badge bg-label-success rounded p-2">Yes</span></td>
+                          <td>10km</td>
+                          <td>10</td>
+                          <td>100</td>
+                          <td>10</td>
+                          <td>1000</td>
+                          <td>10</td>
+                          <td>1000</td>
+                          <td>15000</td>
+                          <td>10</td>
+                          <td>15000</td>
+                          <td>500</td>
+                          <td>500</td>
+                          <td>15km/l</td>
                         </tr>
                         <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
+                          <td>Toyota</td>
+                          <td>1233</td>
                           <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
+                          <td><span class="badge bg-label-success rounded p-2">Yes</span></td>
+                          <td><span class="badge bg-label-success rounded p-2">Yes</span></td>
+                          <td>10km</td>
+                          <td>10</td>
+                          <td>100</td>
+                          <td>10</td>
+                          <td>1000</td>
+                          <td>10</td>
+                          <td>1000</td>
+                          <td>15000</td>
+                          <td>10</td>
+                          <td>15000</td>
+                          <td>500</td>
+                          <td>500</td>
+                          <td>15km/l</td>
                         </tr>
                         <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
+                          <td>Toyota</td>
+                          <td>1233</td>
                           <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
-                        </tr>
-                        <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
-                          <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
-                        </tr>
-                        <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
-                          <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
-                        </tr>
-                        <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
-                          <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
-                        </tr>
-                        <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
-                          <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
-                        </tr>
-                        <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
-                          <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
-                        </tr>
-                        <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
-                          <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
-                        </tr>
-                        <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
-                          <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
-                        </tr>
-                        <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
-                          <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
-                        </tr>
-                        <tr>
-                          <td>2025-11-08 00:00:01 Am</td>
-                          <td>-16</td>
-                          <td>0</td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-danger rounded p-2">off</span></td>
-                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
+                          <td><span class="badge bg-label-success rounded p-2">Yes</span></td>
+                          <td><span class="badge bg-label-success rounded p-2">Yes</span></td>
+                          <td>10km</td>
+                          <td>10</td>
+                          <td>100</td>
+                          <td>10</td>
+                          <td>1000</td>
+                          <td>10</td>
+                          <td>1000</td>
+                          <td>15000</td>
+                          <td>10</td>
+                          <td>15000</td>
+                          <td>500</td>
+                          <td>500</td>
+                          <td>15km/l</td>
                         </tr>
                       </tbody>
                     </table>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="card p-4 shadow-one rounded-2">
-                        <h3 class="mb-4 fs-3">Temperature</h3>
-                        <div id="tempChart"></div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="card p-4 shadow-one rounded-2">
-                        <h3 class="mb-4 fs-3">Ac On/Off</h3>
-                        <div id="acChart"></div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="card p-4 shadow-one rounded-2">
-                        <h3 class="mb-4 fs-3">Door Open/Close</h3>
-                        <div id="doorChart"></div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -652,9 +557,6 @@
     <!-- select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-    <!-- chart  -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
 
@@ -701,120 +603,6 @@
       $(document).ready(function () {
         $(".js-example-basic-single").select2();
       });
-    </script>
-
-    <script>
-      var options = {
-        series: [
-          {
-            name: "Teamperature",
-            data: [31, 40, 28, 51, 42, 109, 100],
-          },
-        ],
-        chart: {
-          height: 250,
-          type: "area",
-        },
-        colors: ["#ff0000"],
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          curve: "smooth",
-        },
-        xaxis: {
-          type: "datetime",
-          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"],
-        },
-        tooltip: {
-          x: {
-            format: "dd/MM/yy HH:mm",
-          },
-        },
-      };
-
-      var tempChart = new ApexCharts(document.querySelector("#tempChart"), options);
-      tempChart.render();
-
-      var options = {
-        series: [
-          {
-            name: "Ac On/Off",
-            data: [28, 20, 21, 24, 25, 26, 18],
-          },
-        ],
-        chart: {
-          height: 250,
-          type: "area",
-        },
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          curve: "smooth",
-        },
-        xaxis: {
-          type: "datetime",
-          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"],
-        },
-        tooltip: {
-          x: {
-            format: "dd/MM/yy HH:mm",
-          },
-        },
-      };
-
-      var acChart = new ApexCharts(document.querySelector("#acChart"), options);
-      acChart.render();
-
-      var options = {
-        series: [
-          {
-            name: "Door Open/Close",
-            data: [
-              ["2018-09-19T00:00:00.000Z", 1], // open
-              ["2018-09-19T01:30:00.000Z", 0], // close
-              ["2018-09-19T02:30:00.000Z", 0], // close
-              ["2018-09-19T03:30:00.000Z", 1], // open
-              ["2018-09-19T04:30:00.000Z", 0], // close
-              ["2018-09-19T05:30:00.000Z", 1], // open
-              ["2018-09-19T06:30:00.000Z", 0], // close
-            ],
-          },
-        ],
-
-        chart: {
-          height: 250,
-          type: "area",
-        },
-        colors: ["#14a86c"],
-
-        dataLabels: {
-          enabled: false,
-        },
-
-        stroke: {
-          curve: "smooth",
-        },
-
-        xaxis: {
-          type: "datetime",
-        },
-
-        tooltip: {
-          x: {
-            format: "dd/MM/yy HH:mm",
-          },
-          y: {
-            formatter: function (value) {
-              return value === 1 ? "Open" : "Close";
-            },
-          },
-        },
-      };
-
-      var doorChart = new ApexCharts(document.querySelector("#doorChart"), options);
-      doorChart.render();
     </script>
   </body>
 </html>
