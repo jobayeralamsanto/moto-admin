@@ -569,3 +569,9 @@ table.dataTable.custom-table-sm.no-footer {
   background-position: center;
   background-size: cover;
 }
+.text-moto {
+  color: #092d3a;
+}
+.text-track {
+  color: #14a86c;
+}
