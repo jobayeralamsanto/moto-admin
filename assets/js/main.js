@@ -87,40 +87,58 @@ if (document.getElementById("layout-menu")) {
   //---------------------------------
 
   let styleSwitcherToggleEl = document.querySelector(".style-switcher-toggle");
+
   if (window.templateCustomizer) {
-    // setStyle light/dark on click of styleSwitcherToggleEl
     if (styleSwitcherToggleEl) {
+      // Click handler
       styleSwitcherToggleEl.addEventListener("click", function () {
         if (window.Helpers.isLightStyle()) {
           window.templateCustomizer.setStyle("dark");
+          updateSwitcherUI("dark");
         } else {
           window.templateCustomizer.setStyle("light");
+          updateSwitcherUI("light");
         }
       });
+
+      // Initial load
+      updateSwitcherUI(window.Helpers.isLightStyle() ? "light" : "dark");
     }
-    // Update style switcher icon and tooltip based on current style
-    if (window.Helpers.isLightStyle()) {
-      if (styleSwitcherToggleEl) {
-        styleSwitcherToggleEl.querySelector("i").classList.add("ti-moon-stars");
+
+    function updateSwitcherUI(mode) {
+      const iconEl = styleSwitcherToggleEl.querySelector("i");
+      const textEl = styleSwitcherToggleEl.querySelector("[data-i18n]");
+
+      // reset icon
+      iconEl.classList.remove("ti-moon-stars", "ti-sun");
+
+      if (mode === "light") {
+        iconEl.classList.add("ti-moon-stars");
+        textEl.textContent = "Dark Mode";
+        textEl.setAttribute("data-i18n", "Dark Mode");
+
         new bootstrap.Tooltip(styleSwitcherToggleEl, {
           title: "Dark mode",
           fallbackPlacements: ["bottom"],
         });
-      }
-      switchImage("light");
-    } else {
-      if (styleSwitcherToggleEl) {
-        styleSwitcherToggleEl.querySelector("i").classList.add("ti-sun");
+
+        switchImage("light");
+      } else {
+        iconEl.classList.add("ti-sun");
+        textEl.textContent = "Light Mode";
+        textEl.setAttribute("data-i18n", "Light Mode");
+
         new bootstrap.Tooltip(styleSwitcherToggleEl, {
           title: "Light mode",
           fallbackPlacements: ["bottom"],
         });
+
+        switchImage("dark");
       }
-      switchImage("dark");
     }
   } else {
-    // Removed style switcher element if not using template customizer
-    styleSwitcherToggleEl.parentElement.remove();
+    // Remove style switcher if not supported
+    styleSwitcherToggleEl?.parentElement.remove();
   }
 
   // Update light/dark image based on current style
@@ -230,85 +248,99 @@ if (document.getElementById("layout-menu")) {
   }
 })();
 
-// ! Removed following code if you do't wish to use jQuery. Remember that navbar search functionality will stop working on removal.
-if (typeof $ !== "undefined") {
-  $(function () {
-    // ! TODO: Required to load after DOM is ready, did this now with jQuery ready.
-    window.Helpers.initSidebarToggle();
-    // Toggle Universal Sidebar
+// datatable Initialization
 
-    // Navbar Search with autosuggest (typeahead)
-    // ? You can remove the following JS if you don't want to use search functionality.
-    //----------------------------------------------------------------------------------
-
-    var searchToggler = $(".search-toggler"),
-      searchInputWrapper = $(".search-input-wrapper"),
-      searchInput = $(".search-input"),
-      contentBackdrop = $(".content-backdrop");
-
-    // Open search input on click of search icon
-    if (searchToggler.length) {
-      searchToggler.on("click", function () {
-        if (searchInputWrapper.length) {
-          searchInputWrapper.toggleClass("d-none");
-          searchInput.focus();
-        }
-      });
-    }
-    // Open search on 'CTRL+/'
-    $(document).on("keydown", function (event) {
-      let ctrlKey = event.ctrlKey,
-        slashKey = event.which === 191;
-
-      if (ctrlKey && slashKey) {
-        if (searchInputWrapper.length) {
-          searchInputWrapper.toggleClass("d-none");
-          searchInput.focus();
-        }
-      }
-    });
-    // Todo: Add container-xxl to twitter-typeahead
-    searchInput.on("focus", function () {
-      if (searchInputWrapper.hasClass("container-xxl")) {
-        searchInputWrapper.find(".twitter-typeahead").addClass("container-xxl");
-      }
-    });
-
-    if (searchInput.length) {
-      // Filter config
-      var filterConfig = function (data) {
-        return function findMatches(q, cb) {
-          let matches;
-          matches = [];
-          data.filter(function (i) {
-            if (i.name.toLowerCase().startsWith(q.toLowerCase())) {
-              matches.push(i);
-            } else if (!i.name.toLowerCase().startsWith(q.toLowerCase()) && i.name.toLowerCase().includes(q.toLowerCase())) {
-              matches.push(i);
-              matches.sort(function (a, b) {
-                return b.name < a.name ? 1 : -1;
-              });
-            } else {
-              return [];
-            }
-          });
-          cb(matches);
-        };
-      };
-
-      // Search JSON
-      var searchJson = "search-vertical.json"; // For vertical layout
-      if ($("#layout-menu").hasClass("menu-horizontal")) {
-        var searchJson = "search-horizontal.json"; // For vertical layout
-      }
-      // Init PerfectScrollbar in search result
-      var psSearch;
-      $(".navbar-search-suggestion").each(function () {
-        psSearch = new PerfectScrollbar($(this)[0], {
-          wheelPropagation: false,
-          suppressScrollX: true,
-        });
-      });
-    }
+$(document).ready(function () {
+  $("#example").DataTable({
+    dom: "lBfrtip",
+    buttons: ["copy", "excel", "pdf", "print"],
+    paging: true,
+    searching: false,
+    ordering: false,
   });
-}
+});
+
+$(document).ready(function () {
+  $("#example-1").DataTable({
+    dom: "lBfrtip",
+    buttons: ["copy", "excel", "pdf", "print"],
+    paging: true,
+    searching: false,
+    ordering: false,
+  });
+});
+$(document).ready(function () {
+  $("#example-2").DataTable({
+    dom: "lBfrtip",
+    buttons: ["copy", "excel", "pdf", "print"],
+    paging: true,
+    searching: false,
+    ordering: false,
+  });
+});
+
+// Date Range Picker Initialization
+$(function () {
+  $('input[name="datetimes"]').daterangepicker({
+    timePicker: true,
+    startDate: moment().startOf("hour"),
+    endDate: moment().startOf("hour").add(32, "hour"),
+    locale: {
+      format: "M/DD hh:mm A",
+    },
+  });
+});
+
+$(function () {
+  $('input[name="birthday"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format("YYYY"), 10),
+  });
+});
+
+// select2 Initialization
+
+$(document).ready(function () {
+  $(".js-example-basic-single").select2();
+});
+
+$(document).ready(function () {
+  $(".js-example-basic-multiple").select2();
+});
+
+// pdf dawnload function
+document.getElementById("downloadPdf").addEventListener("click", function () {
+  const { jsPDF } = window.jspdf;
+  const dashboard = document.getElementById("dashboard");
+
+  html2canvas(dashboard, {
+    scale: 2, // better quality
+    useCORS: true, // important for charts & images
+  }).then((canvas) => {
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF("p", "mm", "a4");
+
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
+
+    const imgWidth = pdfWidth;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+    let heightLeft = imgHeight;
+    let position = 0;
+
+    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+    heightLeft -= pdfHeight;
+
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+      heightLeft -= pdfHeight;
+    }
+
+    pdf.save("dashboard-report.pdf");
+  });
+});

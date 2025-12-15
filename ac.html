@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../../assets/" data-template="vertical-menu-template">
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../../assets/" data-template="vertical-menu-template">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
@@ -193,146 +193,48 @@
                 <div data-i18n="Accounts">Accounts</div>
               </a>
             </li>
+
+            <!-- Notification -->
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-bell"></i>
+                <div data-i18n="Notification">Notification</div>
+              </a>
+            </li>
+            <!-- My Profile -->
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-user-check"></i>
+                <div data-i18n="My Profile">My Profile</div>
+              </a>
+            </li>
+            <!-- Settings -->
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-settings"></i>
+                <div data-i18n="Settings">Settings</div>
+              </a>
+            </li>
+            <!-- logout -->
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-logout"></i>
+                <div data-i18n="Log Out">Log Out</div>
+              </a>
+            </li>
+            <!-- Mode Change  -->
+            <li class="menu-item">
+              <a class="menu-link style-switcher-toggle hide-arrow" href="javascript:void(0);">
+                <i class="menu-icon tf-icons ti ti-md"></i>
+                <div data-i18n="Light Mode">Light Mode</div>
+              </a>
+            </li>
           </ul>
         </aside>
         <!-- / Menu -->
 
         <!-- Layout container -->
         <div class="layout-page">
-          <!-- Navbar -->
-
-          <nav class="layout-navbar container-fluid navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
-            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-                <i class="ti ti-menu-2 ti-sm"></i>
-              </a>
-            </div>
-
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-              <!-- Search -->
-              <div class="navbar-nav align-items-center">
-                <div class="nav-item navbar-search-wrapper mb-0">
-                  <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
-                    <i class="ti ti-search ti-md me-2"></i>
-                    <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
-                  </a>
-                </div>
-              </div>
-              <!-- /Search -->
-
-              <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <!-- Style Switcher -->
-                <li class="nav-item me-2 me-xl-0">
-                  <a class="nav-link style-switcher-toggle hide-arrow" href="javascript:void(0);">
-                    <i class="ti ti-md"></i>
-                  </a>
-                </li>
-                <!--/ Style Switcher -->
-
-                <!-- Notification -->
-                <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                    <i class="ti ti-bell ti-md"></i>
-                    <span class="badge bg-danger rounded-pill badge-notifications">5</span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end py-0">
-                    <li class="dropdown-menu-header border-bottom">
-                      <div class="dropdown-header d-flex align-items-center py-3">
-                        <h5 class="text-body mb-0 me-auto">Notification</h5>
-                        <a href="javascript:void(0)" class="dropdown-notifications-all text-body" data-bs-toggle="tooltip" data-bs-placement="top" title="Mark all as read"><i class="ti ti-mail-opened fs-4"></i></a>
-                      </div>
-                    </li>
-                    <li class="dropdown-notifications-list scrollable-container">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Charles Franklin</h6>
-                              <p class="mb-0">Accepted your connection</p>
-                              <small class="text-muted">12hr ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ti ti-x"></span></a>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-menu-footer border-top">
-                      <a href="javascript:void(0);" class="dropdown-item d-flex justify-content-center text-primary p-2 h-px-40 mb-1 align-items-center"> View all notifications </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ Notification -->
-
-                <!-- User -->
-                <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online">
-                      <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
-                    </div>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-account.html">
-                        <div class="d-flex">
-                          <div class="flex-shrink-0 me-3">
-                            <div class="avatar avatar-online">
-                              <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
-                            </div>
-                          </div>
-                          <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
-                            <small class="text-muted">Admin</small>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-profile-user.html">
-                        <i class="ti ti-user-check me-2 ti-sm"></i>
-                        <span class="align-middle">My Profile</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-account.html">
-                        <i class="ti ti-settings me-2 ti-sm"></i>
-                        <span class="align-middle">Settings</span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="login.html" target="_blank">
-                        <i class="ti ti-logout me-2 ti-sm"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ User -->
-              </ul>
-            </div>
-
-            <!-- Search Small Screens -->
-            <div class="navbar-search-wrapper search-input-wrapper d-none">
-              <input type="text" class="form-control search-input container-fluid border-0" placeholder="Search..." aria-label="Search..." />
-              <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
-            </div>
-          </nav>
-
-          <!-- / Navbar -->
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
@@ -340,126 +242,127 @@
             <div class="container-fluid flex-grow-1 container-p-y">
               <div class="row">
                 <div class="col-12">
-                  <div class="row g-4 mb-4">
-                    <div class="col-lg-6">
-                      <div class="card p-4 shadow-one h-100 rounded-2">
-                        <div class="row g-3">
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-info rounded">
-                                    <i class="ti ti-bus ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Vehicle No</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">Afd4535</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-warning rounded">
-                                    <i class="ti ti-clock ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Time</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">10:30PM</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-success rounded">
-                                    <i class="ti ti-cloud-computing ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Ac ON Time</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">10:30PM</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-danger rounded">
-                                    <i class="ti ti-cloud-computing ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Ac OFF Time</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">10:50PM</p>
-                              </div>
-                            </div>
-                          </div>
+                  <div class="card p-4 shadow-one rounded-2 mb-4">
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 g-2 g-xxl-3">
+                      <div class="col">
+                        <label class="form-label fw-bold">Vehicle Select</label>
+                        <div class="position-relative">
+                          <select class="js-example-basic-multiple form-select form-select-lg" name="states[]" multiple="multiple">
+                            <option>Vehicle One</option>
+                            <option>Vehicle Two</option>
+                            <option>Vehicle Three</option>
+                          </select>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="card p-4 shadow-one h-100 rounded-2">
-                        <div class="row g-3">
-                          <div class="col-md-6">
-                            <label class="form-label">Vehicle Select</label>
-                            <div class="position-relative">
-                              <select class="js-example-basic-single form-select form-select-lg" name="state">
-                                <option>Vehicle One</option>
-                                <option>Vehicle Two</option>
-                                <option>Vehicle Three</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <label class="form-label">Start Point</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-6">
-                            <label class="form-label">End Point</label>
-                            <input type="text" class="form-control" />
-                          </div>
+                      <div class="col">
+                        <label class="form-label fw-bold">Start Point</label>
+                        <div class="position-relative">
+                          <select class="js-example-basic-single form-select form-select-lg" name="states">
+                            <option>Dhaka</option>
+                            <option>Comilla</option>
+                            <option>Chitagong</option>
+                          </select>
                         </div>
+                      </div>
+                      <div class="col">
+                        <label class="form-label fw-bold">End Point</label>
+                        <div class="position-relative">
+                          <select class="js-example-basic-single form-select form-select-lg" name="states">
+                            <option>Dhaka</option>
+                            <option>Comilla</option>
+                            <option>Chitagong</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label class="form-label fw-bold">Date Time</label>
+                        <input class="form-control" type="text" name="datetimes" />
                       </div>
                     </div>
                   </div>
-
-                  <div class="row">
-                    <div class="col-lg-8">
-                      <div class="card p-4 shadow-one rounded-2 card-datatable table-responsive mb-4">
-                        <div class="d-flex align-items-center gap-2 justify-content-between mb-4">
-                          <h3 class="mb-0">Ac</h3>
-                          <div id="reportrange" class="d-flex form-control w-auto"><i class="ti ti-calendar"></i>&nbsp; <span></span> <i class="ti ti-caret-down"></i></div>
+                  <div class="card p-4 shadow-one rounded-2 card-datatable table-responsive" id="dashboard">
+                    <div class="d-flex align-items-center gap-2 justify-content-between mb-4">
+                      <h3 class="mb-0">Ac</h3>
+                      <button id="downloadPdf" class="btn btn-primary">Download PDF</button>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 g-2 g-xxl-3 mb-4">
+                      <div class="col">
+                        <div class="card shadow-one card-bg">
+                          <div class="card-body p-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                              <div class="badge p-1 bg-info rounded">
+                                <i class="ti ti-bus ti-md"></i>
+                              </div>
+                              <h5 class="card-title mb-0">Vehicle No</h5>
+                            </div>
+                            <p class="mb-0 fw-bold fs-5">Afd4535</p>
+                          </div>
                         </div>
-                        <table class="table" id="example">
-                          <thead>
-                            <tr>
-                              <th>Date & Time</th>
-                              <th>ON / OFF</th>
-                              <th>Place</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>10 20-1-25</td>
-                              <td><span class="badge bg-label-success rounded p-2">On</span></td>
-                              <td>Dhaka</td>
-                            </tr>
-                            <tr>
-                              <td>10 20-1-25</td>
-                              <td><span class="badge bg-label-danger rounded p-2">Off</span></td>
-                              <td>Pabna</td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-one card-bg">
+                          <div class="card-body p-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                              <div class="badge p-1 bg-warning rounded">
+                                <i class="ti ti-clock ti-md"></i>
+                              </div>
+                              <h5 class="card-title mb-0">Time</h5>
+                            </div>
+                            <p class="mb-0 fw-bold fs-5">10:30PM</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-one card-bg">
+                          <div class="card-body p-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                              <div class="badge p-1 bg-success rounded">
+                                <i class="ti ti-cloud-computing ti-md"></i>
+                              </div>
+                              <h5 class="card-title mb-0">Ac ON Time</h5>
+                            </div>
+                            <p class="mb-0 fw-bold fs-5">10:30PM</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-one card-bg">
+                          <div class="card-body p-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                              <div class="badge p-1 bg-danger rounded">
+                                <i class="ti ti-cloud-computing ti-md"></i>
+                              </div>
+                              <h5 class="card-title mb-0">Ac OFF Time</h5>
+                            </div>
+                            <p class="mb-0 fw-bold fs-5">10:50PM</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="card p-4 shadow-one rounded-2">
-                        <h3 class="mb-4 fs-3">AC</h3>
-                        <div id="acChart"></div>
-                      </div>
+                    <table class="table" id="example">
+                      <thead>
+                        <tr>
+                          <th>Date & Time</th>
+                          <th>ON / OFF</th>
+                          <th>Place</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>10 20-1-25</td>
+                          <td><span class="badge bg-label-success rounded p-2">On</span></td>
+                          <td>Dhaka</td>
+                        </tr>
+                        <tr>
+                          <td>10 20-1-25</td>
+                          <td><span class="badge bg-label-danger rounded p-2">Off</span></td>
+                          <td>Pabna</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="card p-4 mt-4 shadow-one rounded-2">
+                      <h3 class="mb-4 fs-3">AC</h3>
+                      <div id="acChart"></div>
                     </div>
                   </div>
                 </div>
@@ -527,53 +430,12 @@
     <!-- chart  -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
+    <!-- full page screenshot to pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $("#example").DataTable({
-          dom: "Bfrtip", // Buttons + search + pagination
-          buttons: ["copy", "excel", "pdf", "print"],
-          paging: true,
-          searching: true,
-          ordering: false,
-        });
-      });
-    </script>
-    <script type="text/javascript">
-      $(function () {
-        var start = moment().subtract(29, "days");
-        var end = moment();
-
-        function cb(start, end) {
-          $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"));
-        }
-
-        $("#reportrange").daterangepicker(
-          {
-            startDate: start,
-            endDate: end,
-            ranges: {
-              Today: [moment(), moment()],
-              Yesterday: [moment().subtract(1, "days"), moment().subtract(1, "days")],
-              "Last 7 Days": [moment().subtract(6, "days"), moment()],
-              "Last 30 Days": [moment().subtract(29, "days"), moment()],
-              "This Month": [moment().startOf("month"), moment().endOf("month")],
-              "Last Month": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
-            },
-          },
-          cb
-        );
-
-        cb(start, end);
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $(".js-example-basic-single").select2();
-      });
-    </script>
 
     <script>
       var options = {

@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../../assets/" data-template="vertical-menu-template">
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../../assets/" data-template="vertical-menu-template">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
     <title>Temperature</title>
-
     <meta name="description" content="" />
-
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/img/fav.jpg" />
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
-
     <!-- Icons -->
     <link rel="stylesheet" href="./assets/vendor/fonts/tabler-icons.css" />
-
     <!-- Core CSS -->
     <link rel="stylesheet" href="./assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="./assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="./assets/css/demo.css" />
-
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/datatable/dataTables.min.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/datatable/buttons.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
-
     <!-- Helpers -->
     <script src="./assets/vendor/js/helpers.js"></script>
     <script src="./assets/vendor/js/template-customizer.js"></script>
@@ -43,7 +35,6 @@
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
         <!-- Menu -->
-
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
@@ -52,15 +43,12 @@
               </span>
               <span class="app-brand-text demo menu-text fw-bold"><span class="text-moto">Moto</span><span class="text-track">Tracker</span></span>
             </a>
-
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
               <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
               <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
             </a>
           </div>
-
           <div class="menu-inner-shadow"></div>
-
           <ul class="menu-inner py-1">
             <!-- Dashboards -->
             <li class="menu-item">
@@ -69,7 +57,6 @@
                 <div data-i18n="Dashboards">Live Dashboard</div>
               </a>
             </li>
-
             <!-- Report -->
             <li class="menu-item active open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -129,7 +116,6 @@
                 </li>
               </ul>
             </li>
-
             <!-- Vehicle Maintenanc -->
             <li class="menu-item">
               <a href="#" class="menu-link">
@@ -137,7 +123,6 @@
                 <div data-i18n="Vehicle Maintenanc">Vehicle Maintenanc</div>
               </a>
             </li>
-
             <!-- Vehicle Document -->
             <li class="menu-item">
               <a href="#" class="menu-link">
@@ -145,7 +130,6 @@
                 <div data-i18n="Vehicle Document">Vehicle Document</div>
               </a>
             </li>
-
             <!-- Round Trip -->
             <li class="menu-item">
               <a href="#" class="menu-link">
@@ -153,7 +137,6 @@
                 <div data-i18n="Round Trip">Round Trip</div>
               </a>
             </li>
-
             <!-- Event -->
             <li class="menu-item">
               <a href="#" class="menu-link">
@@ -161,7 +144,6 @@
                 <div data-i18n="Event">Event</div>
               </a>
             </li>
-
             <!-- Income & Expanse -->
             <li class="menu-item">
               <a href="#" class="menu-link">
@@ -169,7 +151,6 @@
                 <div data-i18n="Income & Expanse">Income & Expanse</div>
               </a>
             </li>
-
             <!-- Store -->
             <li class="menu-item">
               <a href="#" class="menu-link">
@@ -177,7 +158,6 @@
                 <div data-i18n="Store">Store</div>
               </a>
             </li>
-
             <!-- Employee -->
             <li class="menu-item">
               <a href="#" class="menu-link">
@@ -185,12 +165,46 @@
                 <div data-i18n="Employee">Employee</div>
               </a>
             </li>
-
             <!-- Accounts -->
             <li class="menu-item">
               <a href="#" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-file-invoice"></i>
                 <div data-i18n="Accounts">Accounts</div>
+              </a>
+            </li>
+            <!-- Notification -->
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-bell"></i>
+                <div data-i18n="Notification">Notification</div>
+              </a>
+            </li>
+            <!-- My Profile -->
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-user-check"></i>
+                <div data-i18n="My Profile">My Profile</div>
+              </a>
+            </li>
+            <!-- Settings -->
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-settings"></i>
+                <div data-i18n="Settings">Settings</div>
+              </a>
+            </li>
+            <!-- logout -->
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-logout"></i>
+                <div data-i18n="Log Out">Log Out</div>
+              </a>
+            </li>
+            <!-- Mode Change  -->
+            <li class="menu-item">
+              <a class="menu-link style-switcher-toggle hide-arrow" href="javascript:void(0);">
+                <i class="menu-icon tf-icons ti ti-md"></i>
+                <div data-i18n="Light Mode">Light Mode</div>
               </a>
             </li>
           </ul>
@@ -199,144 +213,9 @@
 
         <!-- Layout container -->
         <div class="layout-page">
-          <!-- Navbar -->
-
-          <nav class="layout-navbar container-fluid navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
-            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-                <i class="ti ti-menu-2 ti-sm"></i>
-              </a>
-            </div>
-
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-              <!-- Search -->
-              <div class="navbar-nav align-items-center">
-                <div class="nav-item navbar-search-wrapper mb-0">
-                  <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
-                    <i class="ti ti-search ti-md me-2"></i>
-                    <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
-                  </a>
-                </div>
-              </div>
-              <!-- /Search -->
-
-              <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <!-- Style Switcher -->
-                <li class="nav-item me-2 me-xl-0">
-                  <a class="nav-link style-switcher-toggle hide-arrow" href="javascript:void(0);">
-                    <i class="ti ti-md"></i>
-                  </a>
-                </li>
-                <!--/ Style Switcher -->
-
-                <!-- Notification -->
-                <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                    <i class="ti ti-bell ti-md"></i>
-                    <span class="badge bg-danger rounded-pill badge-notifications">5</span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end py-0">
-                    <li class="dropdown-menu-header border-bottom">
-                      <div class="dropdown-header d-flex align-items-center py-3">
-                        <h5 class="text-body mb-0 me-auto">Notification</h5>
-                        <a href="javascript:void(0)" class="dropdown-notifications-all text-body" data-bs-toggle="tooltip" data-bs-placement="top" title="Mark all as read"><i class="ti ti-mail-opened fs-4"></i></a>
-                      </div>
-                    </li>
-                    <li class="dropdown-notifications-list scrollable-container">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Charles Franklin</h6>
-                              <p class="mb-0">Accepted your connection</p>
-                              <small class="text-muted">12hr ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ti ti-x"></span></a>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-menu-footer border-top">
-                      <a href="javascript:void(0);" class="dropdown-item d-flex justify-content-center text-primary p-2 h-px-40 mb-1 align-items-center"> View all notifications </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ Notification -->
-
-                <!-- User -->
-                <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online">
-                      <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
-                    </div>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-account.html">
-                        <div class="d-flex">
-                          <div class="flex-shrink-0 me-3">
-                            <div class="avatar avatar-online">
-                              <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
-                            </div>
-                          </div>
-                          <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
-                            <small class="text-muted">Admin</small>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-profile-user.html">
-                        <i class="ti ti-user-check me-2 ti-sm"></i>
-                        <span class="align-middle">My Profile</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-account.html">
-                        <i class="ti ti-settings me-2 ti-sm"></i>
-                        <span class="align-middle">Settings</span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="login.html" target="_blank">
-                        <i class="ti ti-logout me-2 ti-sm"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ User -->
-              </ul>
-            </div>
-
-            <!-- Search Small Screens -->
-            <div class="navbar-search-wrapper search-input-wrapper d-none">
-              <input type="text" class="form-control search-input container-fluid border-0" placeholder="Search..." aria-label="Search..." />
-              <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
-            </div>
-          </nav>
-
-          <!-- / Navbar -->
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
-
             <div class="container-fluid flex-grow-1 container-p-y">
               <div class="row">
                 <div class="col-12">
@@ -353,112 +232,124 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="row g-4 mb-4">
-                    <div class="col-lg-6">
-                      <div class="card p-4 shadow-one h-100 rounded-2">
-                        <div class="row g-3">
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-info rounded">
-                                    <i class="ti ti-bus ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Vehicle No</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">Afd4535</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-warning rounded">
-                                    <i class="ti ti-clock ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Time</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">10:30PM</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-danger rounded">
-                                    <i class="ti ti-minus ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Min</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">-3</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-success rounded">
-                                    <i class="ti ti-plus ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Max</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">+3</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-4">
-                            <div class="card shadow-one card-bg">
-                              <div class="card-body p-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                  <div class="badge p-1 bg-facebook rounded">
-                                    <i class="ti ti-equal ti-md"></i>
-                                  </div>
-                                  <h5 class="card-title mb-0">Avarage</h5>
-                                </div>
-                                <p class="mb-0 fw-bold fs-5">3</p>
-                              </div>
-                            </div>
-                          </div>
+
+                  <div class="card p-4 shadow-one rounded-2 mb-4">
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 g-2 g-xxl-3">
+                      <div class="col">
+                        <label class="form-label fw-bold">Vehicle Select</label>
+                        <div class="position-relative">
+                          <select class="js-example-basic-multiple form-select form-select-lg" name="states[]" multiple="multiple">
+                            <option>Vehicle One</option>
+                            <option>Vehicle Two</option>
+                            <option>Vehicle Three</option>
+                          </select>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="card p-4 shadow-one h-100 rounded-2">
-                        <div class="row g-3">
-                          <div class="col-md-6">
-                            <label class="form-label">Vehicle Select</label>
-                            <div class="position-relative">
-                              <select class="js-example-basic-single form-select form-select-lg" name="state">
-                                <option>Vehicle One</option>
-                                <option>Vehicle Two</option>
-                                <option>Vehicle Three</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <label class="form-label">interval munite</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-6">
-                            <label class="form-label">Start Point</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-6">
-                            <label class="form-label">End Point</label>
-                            <input type="text" class="form-control" />
-                          </div>
+                      <div class="col">
+                        <label class="form-label fw-bold">Interval Minute</label>
+                        <input type="text" class="form-control" />
+                      </div>
+                      <div class="col">
+                        <label class="form-label fw-bold">Start Point</label>
+                        <div class="position-relative">
+                          <select class="js-example-basic-single form-select form-select-lg" name="states">
+                            <option>Dhaka</option>
+                            <option>Comilla</option>
+                            <option>Chitagong</option>
+                          </select>
                         </div>
+                      </div>
+                      <div class="col">
+                        <label class="form-label fw-bold">End Point</label>
+                        <div class="position-relative">
+                          <select class="js-example-basic-single form-select form-select-lg" name="states">
+                            <option>Dhaka</option>
+                            <option>Comilla</option>
+                            <option>Chitagong</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label class="form-label fw-bold">Date Time</label>
+                        <input type="text" class="form-control" name="datetimes" />
                       </div>
                     </div>
                   </div>
-                  <div class="card p-4 shadow-one rounded-2 card-datatable table-responsive mb-4">
+
+                  <div class="card p-4 shadow-one rounded-2 card-datatable table-responsive" id="dashboard">
                     <div class="d-flex align-items-center gap-2 justify-content-between mb-4">
                       <h3 class="mb-0">Temperature Log</h3>
-                      <div id="reportrange" class="d-flex form-control w-auto"><i class="ti ti-calendar"></i>&nbsp; <span></span> <i class="ti ti-caret-down"></i></div>
+                      <button id="downloadPdf" class="btn btn-primary">Download PDF</button>
                     </div>
+
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 g-2 g-xxl-3 mb-4">
+                      <div class="col">
+                        <div class="card shadow-one card-bg">
+                          <div class="card-body p-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                              <div class="badge p-1 bg-info rounded">
+                                <i class="ti ti-bus ti-md"></i>
+                              </div>
+                              <h5 class="card-title mb-0">Vehicle No</h5>
+                            </div>
+                            <p class="mb-0 fw-bold fs-5">Afd4535</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-one card-bg">
+                          <div class="card-body p-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                              <div class="badge p-1 bg-warning rounded">
+                                <i class="ti ti-clock ti-md"></i>
+                              </div>
+                              <h5 class="card-title mb-0">Time</h5>
+                            </div>
+                            <p class="mb-0 fw-bold fs-5">10:30PM</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-one card-bg">
+                          <div class="card-body p-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                              <div class="badge p-1 bg-danger rounded">
+                                <i class="ti ti-minus ti-md"></i>
+                              </div>
+                              <h5 class="card-title mb-0">Min</h5>
+                            </div>
+                            <p class="mb-0 fw-bold fs-5">-3</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-one card-bg">
+                          <div class="card-body p-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                              <div class="badge p-1 bg-success rounded">
+                                <i class="ti ti-plus ti-md"></i>
+                              </div>
+                              <h5 class="card-title mb-0">Max</h5>
+                            </div>
+                            <p class="mb-0 fw-bold fs-5">+3</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-one card-bg">
+                          <div class="card-body p-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                              <div class="badge p-1 bg-facebook rounded">
+                                <i class="ti ti-equal ti-md"></i>
+                              </div>
+                              <h5 class="card-title mb-0">Avarage</h5>
+                            </div>
+                            <p class="mb-0 fw-bold fs-5">3</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <table class="table" id="example">
                       <thead>
                         <tr>
@@ -569,24 +460,36 @@
                         </tr>
                       </tbody>
                     </table>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="card p-4 shadow-one rounded-2">
-                        <h3 class="mb-4 fs-3">Temperature</h3>
-                        <div id="tempChart"></div>
+                    <div class="row g-3 mt-4">
+                      <div class="col-12">
+                        <div class="card p-4 shadow-one rounded-2">
+                          <h3 class="mb-4 fs-3">Temperature</h3>
+                          <div id="tempChart"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="card p-4 shadow-one rounded-2">
-                        <h3 class="mb-4 fs-3">Ac On/Off</h3>
-                        <div id="acChart"></div>
+                      <div class="col-12">
+                        <div class="card p-4 shadow-one rounded-2">
+                          <h3 class="mb-4 fs-3">Ac On/Off</h3>
+                          <div id="acChart"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="card p-4 shadow-one rounded-2">
-                        <h3 class="mb-4 fs-3">Door Open/Close</h3>
-                        <div id="doorChart"></div>
+                      <div class="col-12">
+                        <div class="card p-4 shadow-one rounded-2">
+                          <h3 class="mb-4 fs-3">Door Open/Close</h3>
+                          <div id="doorChart"></div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card p-4 shadow-one rounded-2">
+                          <h3 class="mb-4 fs-3">Engine</h3>
+                          <div id="engineChart"></div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card p-4 shadow-one rounded-2">
+                          <h3 class="mb-4 fs-3">Humanity</h3>
+                          <div id="humanityChart"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -644,64 +547,20 @@
     <!-- pdfmake (PDF export) -->
     <script src="./assets/vendor/libs/datatable/pdfmake.min.js"></script>
     <script src="./assets/vendor/libs/datatable/vfs_fonts.js"></script>
-
     <!-- daterangepicker -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
     <!-- select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
     <!-- chart  -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
+    <!-- full page screenshot to pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $("#example").DataTable({
-          dom: "Bfrtip", // Buttons + search + pagination
-          buttons: ["copy", "excel", "pdf", "print"],
-          paging: true,
-          searching: true,
-          ordering: false,
-        });
-      });
-    </script>
-    <script type="text/javascript">
-      $(function () {
-        var start = moment().subtract(29, "days");
-        var end = moment();
-
-        function cb(start, end) {
-          $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"));
-        }
-
-        $("#reportrange").daterangepicker(
-          {
-            startDate: start,
-            endDate: end,
-            ranges: {
-              Today: [moment(), moment()],
-              Yesterday: [moment().subtract(1, "days"), moment().subtract(1, "days")],
-              "Last 7 Days": [moment().subtract(6, "days"), moment()],
-              "Last 30 Days": [moment().subtract(29, "days"), moment()],
-              "This Month": [moment().startOf("month"), moment().endOf("month")],
-              "Last Month": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
-            },
-          },
-          cb
-        );
-
-        cb(start, end);
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $(".js-example-basic-single").select2();
-      });
-    </script>
 
     <script>
       var options = {
@@ -815,6 +674,70 @@
 
       var doorChart = new ApexCharts(document.querySelector("#doorChart"), options);
       doorChart.render();
+
+      var options = {
+        series: [
+          {
+            name: "Engine",
+            data: [31, 40, 28, 51, 42, 109, 100],
+          },
+        ],
+        chart: {
+          height: 250,
+          type: "area",
+        },
+        colors: ["#dd9029"],
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          curve: "smooth",
+        },
+        xaxis: {
+          type: "datetime",
+          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"],
+        },
+        tooltip: {
+          x: {
+            format: "dd/MM/yy HH:mm",
+          },
+        },
+      };
+
+      var engineChart = new ApexCharts(document.querySelector("#engineChart"), options);
+      engineChart.render();
+
+      var options = {
+        series: [
+          {
+            name: "Humanity",
+            data: [31, 40, 28, 51, 42, 109, 100],
+          },
+        ],
+        chart: {
+          height: 250,
+          type: "area",
+        },
+        colors: ["#55e1f9"],
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          curve: "smooth",
+        },
+        xaxis: {
+          type: "datetime",
+          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"],
+        },
+        tooltip: {
+          x: {
+            format: "dd/MM/yy HH:mm",
+          },
+        },
+      };
+
+      var humanityChart = new ApexCharts(document.querySelector("#humanityChart"), options);
+      humanityChart.render();
     </script>
   </body>
 </html>
