@@ -300,6 +300,56 @@ $(function () {
   });
 });
 
+$(function () {
+  var start = moment().subtract(29, "days").startOf("day");
+  var end = moment().endOf("day");
+
+  function cb(start, end) {
+    const picker = $("#reportrange").data("daterangepicker");
+
+    if (picker.chosenLabel === "Custom Range") {
+      $("#reportrange span").html(start.format("MMM D,  hh:mm A") + " - " + end.format("MMM D,  hh:mm A"));
+    } else {
+      $("#reportrange span").html(start.format("MMM D ") + " - " + end.format("MMM D "));
+    }
+  }
+
+  $("#reportrange").daterangepicker(
+    {
+      startDate: start,
+      endDate: end,
+      timePicker: true,
+      timePickerIncrement: 5,
+      locale: {
+        format: "MMMM D, YYYY",
+        customRangeLabel: "Custom Range",
+      },
+      ranges: {
+        Today: [moment().startOf("day"), moment().endOf("day")],
+        Yesterday: [moment().subtract(1, "days").startOf("day"), moment().subtract(1, "days").endOf("day")],
+        "Last 7 Days": [moment().subtract(6, "days").startOf("day"), moment().endOf("day")],
+        "Last 30 Days": [moment().subtract(29, "days").startOf("day"), moment().endOf("day")],
+        "This Month": [moment().startOf("month"), moment().endOf("month")],
+        "Last Month": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
+      },
+    },
+    cb
+  );
+  $("#reportrange").on("click.daterangepicker", function (ev, picker) {
+    if (picker.chosenLabel === "Custom Range") {
+      picker.timePicker = true;
+      picker.locale.format = "MMMM D, YYYY HH:mm";
+    } else {
+      picker.timePicker = false;
+      picker.locale.format = "MMMM D, YYYY";
+    }
+
+    picker.updateView();
+    picker.updateCalendars();
+  });
+  cb(start, end);
+});
+
 // select2 Initialization
 
 $(document).ready(function () {
