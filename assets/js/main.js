@@ -252,9 +252,9 @@ if (document.getElementById("layout-menu")) {
 
 $(document).ready(function () {
   $("#example").DataTable({
-    dom: "lBfrtip",
+    dom: "Bfrtip",
     buttons: ["copy", "excel", "pdf", "print"],
-    paging: true,
+    paging: false,
     searching: false,
     ordering: false,
   });
@@ -262,18 +262,18 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $("#example-1").DataTable({
-    dom: "lBfrtip",
+    dom: "Bfrtip",
     buttons: ["copy", "excel", "pdf", "print"],
-    paging: true,
+    paging: false,
     searching: false,
     ordering: false,
   });
 });
 $(document).ready(function () {
   $("#example-2").DataTable({
-    dom: "lBfrtip",
+    dom: "Bfrtip",
     buttons: ["copy", "excel", "pdf", "print"],
-    paging: true,
+    paging: false,
     searching: false,
     ordering: false,
   });
