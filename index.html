@@ -244,7 +244,7 @@
 
             <div class="container-fluid flex-grow-1 container-p-y">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-xl-6">
                   <div class="">
                     <div class="header">
                       <div class="fs-4"><b>DM-LA-11-3356</b></div>
@@ -253,9 +253,9 @@
                     </div>
 
                     <div class="dashboard">
-                      <div class="row gap-4 gap-md-2 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                      <div class="row gap-4 gap-md-0 row-cols-1 row-cols-md-2 row-cols-lg-3">
                         <!-- speed meter -->
-                        <div class="col">
+                        <div class="col d-flex align-items-center justify-content-center">
                           <div class="svg-container">
                             <svg width="100%" height="200" viewBox="0 0 349 266" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path id="meter-bg-bar" d="M50.8884 250C37.0172 227.815 29 201.594 29 173.5C29 93.6949 93.6949 29 173.5 29C253.305 29 318 93.6949 318 173.5C318 201.594 309.983 227.815 296.112 250" stroke="#CFF80B" stroke-width="57" />
@@ -329,7 +329,6 @@
                             <div class="fuel-gauge-body">
                               <div class="needle" id="needle"></div>
                               <div class="fuel-gauge-center"></div>
-                              <!-- fuel-Gauge markers -->
                               <div class="fuel-gauge-marker1" style="transform: rotate(-90deg)"></div>
                               <div class="fuel-gauge-marker2" style="transform: rotate(-67.5deg)"></div>
                               <div class="fuel-gauge-marker3" style="transform: rotate(-45deg)"></div>
@@ -350,20 +349,49 @@
                         </div>
                         <!-- temperature meter  -->
                         <div class="col">
-                          <div class="gauge-wrap">
-                            <canvas id="gauge" width="320" height="320"></canvas>
-                            <div class="value" id="tempText">-20 °F</div>
-
-                            <div class="controls">
-                              <button class="minus" id="minus">−</button>
-                              <button class="plus" id="plus">+</button>
+                          <div class="d-flex flex-column align-items-center justify-content-center position-relative">
+                            <!-- GAUGE -->
+                            <div style="transform: rotate(270deg)">
+                              <svg width="100%" height="150" viewBox="0 0 200 200">
+                                <defs>
+                                  <radialGradient id="metalGradient">
+                                    <stop offset="0%" stop-color="#999" />
+                                    <stop offset="50%" stop-color="#ccc" />
+                                    <stop offset="100%" stop-color="#666" />
+                                  </radialGradient>
+                                  <radialGradient id="hubGradient">
+                                    <stop offset="0%" stop-color="#e0e0e0" />
+                                    <stop offset="50%" stop-color="#a0a0a0" />
+                                    <stop offset="100%" stop-color="#707070" />
+                                  </radialGradient>
+                                </defs>
+                                <!-- Outer rim -->
+                                <circle cx="100" cy="100" r="98" fill="url(#metalGradient)" />
+                                <circle cx="100" cy="100" r="95" fill="#2a2a2a" />
+                                <circle cx="100" cy="100" r="92" fill="#000" />
+                                <!-- Ticks -->
+                                <g id="ticks"></g>
+                                <!-- Needle -->
+                                <line id="temp-needle" x1="100" y1="100" x2="100" y2="35" stroke="#4A90E2" stroke-width="3" stroke-linecap="round" style="transition: all 0.3s ease-out" />
+                                <!-- Hub -->
+                                <circle cx="100" cy="100" r="8" fill="url(#hubGradient)" />
+                                <circle cx="100" cy="100" r="6" fill="#d0d0d0" />
+                              </svg>
+                            </div>
+                            <!-- CONTROLS -->
+                            <div class="panel mt-2">
+                              <div id="tempLabel">20°F</div>
+                              <div class="buttons">
+                                <button class="btn-minus" id="minus">-</button>
+                                <button class="btn-plus" id="plus">+</button>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
 
                       <!-- Bottom Stats -->
-                      <div class="row row-cols-4 row-cols-md-6 row-cols-xl-8 mt-3 gap-2">
+                      <div class="row justify-content-center row-cols-xs-4 row-cols-md-4 row-cols-xl-6 mt-3 gap-2">
                         <div class="col stat-box">🔧<br />Engine<br />Off</div>
                         <div class="col stat-box">❄️<br />AC<br />On</div>
                         <div class="col stat-box">🌡️<br />TEMP<br />28°C</div>
@@ -493,101 +521,119 @@
 
       range.addEventListener("input", (e) => {
         const value = e.target.value;
-        const degree = value * 1.8; // Convert range value to degrees (0 to 180)
+        const degree = value * 1.8;
         needle.style.transform = `rotate(${degree - 30}deg)`;
         percentageDisplay.textContent = `${value}%`;
       });
     </script>
 
     <script>
-      const canvas = document.getElementById("gauge");
-      const ctx = canvas.getContext("2d");
-      const tempText = document.getElementById("tempText");
-
-      let temp = -20;
       const min = -60;
       const max = 140;
 
-      function drawGauge(value) {
-        ctx.clearRect(0, 0, 320, 320);
+      const tempNeedle = document.getElementById("temp-needle");
+      const slider = document.getElementById("slider");
+      const tempLabel = document.getElementById("tempLabel");
+      const ticksGroup = document.getElementById("ticks");
 
-        const cx = 160,
-          cy = 160,
-          r = 140;
+      function valueToAngle(value) {
+        const clamped = Math.max(min, Math.min(max, value));
+        const percent = (clamped - min) / (max - min);
+        return -135 + percent * 270;
+      }
 
-        // Outer ring
-        ctx.beginPath();
-        ctx.arc(cx, cy, r, 0, Math.PI * 2);
-        ctx.fillStyle = "#000";
-        ctx.fill();
-        ctx.lineWidth = 8;
-        ctx.strokeStyle = "#bbb";
-        ctx.stroke();
+      function updateNeedle(value) {
+        const angle = valueToAngle(value);
+        const rad = (angle * Math.PI) / 180;
+        const length = 65;
 
-        // Scale
-        ctx.save();
-        ctx.translate(cx, cy);
-        for (let i = min; i <= max; i += 10) {
-          const ang = ((i - min) / (max - min)) * Math.PI * 1.5 + Math.PI * 0.75;
-          ctx.rotate(ang);
-          ctx.beginPath();
-          ctx.moveTo(0, -r + 10);
-          ctx.lineTo(0, -r + (i % 20 === 0 ? 30 : 22));
-          ctx.strokeStyle = "#fff";
-          ctx.lineWidth = i % 20 === 0 ? 3 : 1.5;
-          ctx.stroke();
-          ctx.rotate(-ang);
+        const x = 100 + Math.cos(rad) * length;
+        const y = 100 + Math.sin(rad) * length;
 
-          if (i % 20 === 0) {
-            ctx.fillStyle = "#fff";
-            ctx.font = "14px Arial";
-            ctx.textAlign = "center";
-            ctx.textBaseline = "middle";
-            ctx.fillText(i, Math.cos(ang) * (r - 50), Math.sin(ang) * (r - 50));
+        tempNeedle.setAttribute("x2", x);
+        tempNeedle.setAttribute("y2", y);
+
+        tempLabel.textContent = ` ${value}°F`;
+      }
+
+      function generateTicks() {
+        const step = 20;
+        const range = max - min;
+
+        for (let i = min; i <= max; i += step) {
+          const percent = (i - min) / range;
+          const angle = -135 + percent * 270;
+          const rad = (angle * Math.PI) / 180;
+
+          // Major tick
+          const x1 = 100 + Math.cos(rad) * 85;
+          const y1 = 100 + Math.sin(rad) * 85;
+          const x2 = 100 + Math.cos(rad) * 95;
+          const y2 = 100 + Math.sin(rad) * 95;
+
+          const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+          line.setAttribute("x1", x1);
+          line.setAttribute("y1", y1);
+          line.setAttribute("x2", x2);
+          line.setAttribute("y2", y2);
+          line.setAttribute("stroke", "white");
+          line.setAttribute("stroke-width", "2");
+          ticksGroup.appendChild(line);
+
+          // Label
+          const lx = 100 + Math.cos(rad) * 70;
+          const ly = 100 + Math.sin(rad) * 70;
+
+          const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          text.setAttribute("x", lx);
+          text.setAttribute("y", ly);
+          text.setAttribute("fill", "white");
+          text.setAttribute("font-size", "12");
+          text.setAttribute("font-weight", "bold");
+          text.setAttribute("text-anchor", "middle");
+          text.setAttribute("dominant-baseline", "middle");
+          text.textContent = i;
+          ticksGroup.appendChild(text);
+
+          // Minor ticks
+          if (i < max) {
+            for (let j = 1; j < 4; j++) {
+              const mv = i + (step / 4) * j;
+              const mp = (mv - min) / range;
+              const ma = -135 + mp * 270;
+              const mr = (ma * Math.PI) / 180;
+
+              const mx1 = 100 + Math.cos(mr) * 90;
+              const my1 = 100 + Math.sin(mr) * 90;
+              const mx2 = 100 + Math.cos(mr) * 95;
+              const my2 = 100 + Math.sin(mr) * 95;
+
+              const mline = document.createElementNS("http://www.w3.org/2000/svg", "line");
+              mline.setAttribute("x1", mx1);
+              mline.setAttribute("y1", my1);
+              mline.setAttribute("x2", mx2);
+              mline.setAttribute("y2", my2);
+              mline.setAttribute("stroke", "white");
+              mline.setAttribute("stroke-width", "1");
+              ticksGroup.appendChild(mline);
+            }
           }
         }
-
-        // Unit
-        ctx.fillStyle = "#fff";
-        ctx.font = "16px Arial";
-        ctx.fillText("°F", -10, -30);
-
-        // Needle
-        const nAng = ((value - min) / (max - min)) * Math.PI * 1.5 + Math.PI * 0.75;
-        ctx.rotate(nAng);
-        ctx.beginPath();
-        ctx.moveTo(-8, 0);
-        ctx.lineTo(0, -110);
-        ctx.lineTo(8, 0);
-        ctx.fillStyle = "linear-gradient(to right, #60a5fa, #1d4ed8)";
-        ctx.fill();
-        ctx.rotate(-nAng);
-
-        // Center hub
-        ctx.beginPath();
-        ctx.arc(0, 0, 14, 0, Math.PI * 2);
-        ctx.fillStyle = "#ddd";
-        ctx.fill();
-
-        ctx.restore();
       }
 
-      function update() {
-        tempText.textContent = temp + " °F";
-        drawGauge(temp);
-      }
-
-      update();
+      let currentTemp = 20;
 
       document.getElementById("minus").onclick = () => {
-        temp = Math.max(min, temp - 5);
-        update();
+        currentTemp = Math.max(min, currentTemp - 10);
+        updateNeedle(currentTemp);
       };
 
       document.getElementById("plus").onclick = () => {
-        temp = Math.min(max, temp + 5);
-        update();
+        currentTemp = Math.min(max, currentTemp + 10);
+        updateNeedle(currentTemp);
       };
+      generateTicks();
+      updateNeedle(20);
     </script>
   </body>
 </html>

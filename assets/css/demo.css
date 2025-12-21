@@ -344,7 +344,7 @@ table.dataTable.custom-table-sm.no-footer {
 }
 
 .fuel-gauge-body {
-  width: 200px;
+  width: 150px;
   height: 100px;
   border: 5px solid #75e10e;
   border-top-left-radius: 200px;
@@ -359,8 +359,8 @@ table.dataTable.custom-table-sm.no-footer {
   height: 0;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  border-bottom: 90px solid red;
-  border-radius: 40% 40% 25% 25%; /* Round the bottom of the needle */
+  border-bottom: 73px solid red;
+  border-radius: 40% 40% 25% 25%;
   position: absolute;
   bottom: 0;
   left: 47.25%;
@@ -384,7 +384,7 @@ table.dataTable.custom-table-sm.no-footer {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
-  width: 200px;
+  width: 150px;
 }
 
 #fuel-gauge-labels span {
@@ -493,7 +493,7 @@ table.dataTable.custom-table-sm.no-footer {
 
 .percentage-display {
   margin-top: -10px;
-  width: 200px;
+  width: 150px;
   text-align: center;
 }
 
@@ -524,7 +524,13 @@ canvas {
   justify-content: center;
   gap: 12px;
 }
-.minus {
+#tempLabel {
+  position: absolute;
+  bottom: 48px;
+  padding-left: 15px;
+  color: #fff;
+}
+.btn-minus {
   background: #1e40af;
   color: #fff;
   border: 0;
@@ -532,8 +538,12 @@ canvas {
   font-size: 26px;
   padding: 6px 9px;
   line-height: 16px;
+  width: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
-.plus {
+.btn-plus {
   background: #b91c1c;
   color: #fff;
   border: 0;
@@ -541,6 +551,10 @@ canvas {
   font-size: 26px;
   padding: 6px 9px;
   line-height: 16px;
+  width: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 .authentication-wrapper {
   display: flex;
