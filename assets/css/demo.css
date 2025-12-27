@@ -178,12 +178,7 @@ div.dt-buttons > div.dt-button-split .dt-button {
   padding: 15px;
   color: #fff;
 }
-/* Gauge */
-.fuel-gauge {
-  width: 150px;
-  height: 150px;
-  position: relative;
-}
+
 .fuel-gauge svg {
   position: absolute;
   inset: 0;
@@ -194,21 +189,34 @@ div.dt-buttons > div.dt-button-split .dt-button {
   border-radius: 10px;
   text-align: center;
   border: 1px solid #d1d1d1;
+  font-size: 14px;
 }
 
 .svg-container {
   position: relative;
-  width: fit-content;
 }
 #speed {
   color: rgb(35, 99, 237);
-  font-size: 35px;
-  line-height: 100%;
+  font-size: 21px;
+  margin-bottom: 0px !important;
+  z-index: 1;
+  line-height: 10px;
+}
+.km {
+  font-size: 11px;
+  color: rgb(104, 105, 108);
+  line-height: 10px;
+}
+.speed-display {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  bottom: 30px;
-  z-index: 1;
+  bottom: 0px;
+  width: 39px;
+  text-align: center;
+}
+#inner-circle {
+  position: relative !important;
 }
 #meter-bg-bar {
   animation: dash 4s linear forwards infinite;
@@ -526,9 +534,10 @@ canvas {
 }
 #tempLabel {
   position: absolute;
-  bottom: 48px;
-  padding-left: 15px;
+  bottom: 2px;
   color: #fff;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .btn-minus {
   background: #1e40af;
