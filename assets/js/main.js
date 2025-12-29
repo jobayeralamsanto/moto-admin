@@ -360,6 +360,10 @@ $(document).ready(function () {
   $(".js-example-basic-multiple").select2();
 });
 
+// MultiSelect
+
+const vehicle = $("#vehicles").filterMultiSelect();
+
 // pdf dawnload function
 document.getElementById("downloadPdf").addEventListener("click", function () {
   const { jsPDF } = window.jspdf;

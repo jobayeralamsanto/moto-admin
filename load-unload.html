@@ -281,6 +281,9 @@
                         <label class="form-label fw-bold">Date Time</label>
                         <div id="reportrange" class="form-control"><span></span></div>
                       </div>
+                      <div class="col d-flex align-items-end">
+                        <a href="#" class="btn btn-primary w-100">Generate</a>
+                      </div>
                     </div>
                   </div>
 
@@ -365,12 +368,8 @@
                       </tbody>
                     </table>
                     <div class="card p-4 shadow-one rounded-2 mt-4">
-                      <h3 class="mb-4 fs-3">Load</h3>
+                      <h3 class="mb-4 fs-3">Load/Unload</h3>
                       <div id="loadChart"></div>
-                    </div>
-                    <div class="card p-4 shadow-one rounded-2 mt-4">
-                      <h3 class="mb-4 fs-3">Unload</h3>
-                      <div id="unloadChart"></div>
                     </div>
                   </div>
                 </div>
@@ -477,37 +476,6 @@
 
       var loadChart = new ApexCharts(document.querySelector("#loadChart"), options);
       loadChart.render();
-
-      var options = {
-        series: [
-          {
-            name: "Unload",
-            data: [28, 20, 21, 24, 25, 26, 18],
-          },
-        ],
-        chart: {
-          height: 250,
-          type: "area",
-        },
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          curve: "smooth",
-        },
-        xaxis: {
-          type: "datetime",
-          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"],
-        },
-        tooltip: {
-          x: {
-            format: "dd/MM/yy HH:mm",
-          },
-        },
-      };
-
-      var unloadChart = new ApexCharts(document.querySelector("#unloadChart"), options);
-      unloadChart.render();
     </script>
   </body>
 </html>

@@ -275,6 +275,9 @@
                         <label class="form-label fw-bold">Date Time</label>
                         <div id="reportrange" class="form-control"><span></span></div>
                       </div>
+                      <div class="col d-flex align-items-end">
+                        <a href="#" class="btn btn-primary w-100">Generate</a>
+                      </div>
                     </div>
                   </div>
                   <div class="card p-4 shadow-one rounded-2 card-datatable table-responsive" id="dashboard">
@@ -346,7 +349,7 @@
                           <td><span class="badge bg-label-success rounded p-2">Yes</span></td>
                           <td><span class="badge bg-label-success rounded p-2">Yes</span></td>
                           <td>10km</td>
-                          <td>10</td>
+                          <td><a href="#" data-bs-toggle="modal" data-bs-target="#maxStoppagesModal">10</a></td>
                           <td>100</td>
                           <td>10</td>
                           <td>1000</td>
@@ -355,10 +358,10 @@
                           <td>15000</td>
                           <td>10</td>
                           <td>15000</td>
-                          <td>500</td>
+                          <td><a href="#" data-bs-toggle="modal" data-bs-target="#drainModal">500</a></td>
                           <td>500</td>
                           <td>15500</td>
-                          <td>15km/l</td>
+                          <td><a href="#" data-bs-toggle="modal" data-bs-target="#fillDrainModal">15km/l</a></td>
                         </tr>
                         <tr>
                           <td>Toyota</td>
@@ -409,6 +412,137 @@
               </div>
             </div>
             <!-- / Content -->
+
+            <!-- Max Stoppages Modal -->
+            <div class="modal fade" id="maxStoppagesModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered modal-simple modal-upgrade-plan">
+                <div class="modal-content p-3 p-md-5">
+                  <div class="modal-body p-2">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center">
+                      <h3 class="mb-2">Max Stoppages</h3>
+                    </div>
+                    <table class="table custom-table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Time</th>
+                          <th>Location</th>
+                          <th>Stop Duration</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>10:55pm</td>
+                          <td>Pabna</td>
+                          <td>1 hour</td>
+                        </tr>
+                        <tr>
+                          <td>11:55pm</td>
+                          <td>Pabna</td>
+                          <td>2 hour</td>
+                        </tr>
+                        <tr>
+                          <td>10:55pm</td>
+                          <td>Pabna</td>
+                          <td>5 hour</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/ Max Stoppages Modal -->
+
+            <!-- Drain Modal -->
+            <div class="modal fade" id="drainModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered modal-simple modal-upgrade-plan">
+                <div class="modal-content p-3 p-md-5">
+                  <div class="modal-body p-2">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center">
+                      <h3 class="mb-2">Drain</h3>
+                    </div>
+                    <table class="table custom-table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Sl</th>
+                          <th>Drain Unite</th>
+                          <th>Time</th>
+                          <th>Location</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>5ltr</td>
+                          <td>10:55pm</td>
+                          <td>Pabna</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>10ltr</td>
+                          <td>11:55pm</td>
+                          <td>Pabna</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>5ltr</td>
+                          <td>10:55pm</td>
+                          <td>Pabna</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/ Drain Modal -->
+
+            <!-- Fill Drain Modal -->
+            <div class="modal fade" id="fillDrainModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered modal-simple modal-upgrade-plan">
+                <div class="modal-content p-3 p-md-5">
+                  <div class="modal-body p-2">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center">
+                      <h3 class="mb-2">Fill Drain</h3>
+                    </div>
+                    <table class="table custom-table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Sl</th>
+                          <th>Drain Unite</th>
+                          <th>Time</th>
+                          <th>Location</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>5ltr</td>
+                          <td>10:55pm</td>
+                          <td>Pabna</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>10ltr</td>
+                          <td>11:55pm</td>
+                          <td>Pabna</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>5ltr</td>
+                          <td>10:55pm</td>
+                          <td>Pabna</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/ Fill Drain Modal -->
 
             <!-- Footer -->
             <footer class="content-footer footer bg-navbar-theme">

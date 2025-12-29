@@ -247,7 +247,7 @@
               <div class="row">
                 <div class="col-12">
                   <div class="card p-4 shadow-one rounded-2 mb-4">
-                    <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 g-2 g-xxl-3">
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-xxl-6 g-2 g-xxl-3">
                       <div class="col">
                         <label class="form-label">Vehicle Select</label>
                         <div class="position-relative">
@@ -286,12 +286,15 @@
                         <label class="form-label fw-bold">Date Time</label>
                         <div id="reportrange" class="form-control"><span></span></div>
                       </div>
+                      <div class="col d-flex align-items-end">
+                        <a href="#" class="btn btn-primary w-100">Generate</a>
+                      </div>
                     </div>
                   </div>
 
                   <div class="card p-4 shadow-one rounded-2 card-datatable table-responsive" id="dashboard">
                     <div class="d-flex align-items-center gap-2 justify-content-between mb-4">
-                      <h3 class="mb-0">Round Trip (VMS)</h3>
+                      <h3 class="mb-0">Trip Summery</h3>
                     </div>
                     <table class="table custom-table-sm table-bordered" id="example">
                       <thead>
@@ -329,6 +332,7 @@
                           <th>Parking Name</th>
                           <th>Trip NO</th>
                           <th>Approved</th>
+                          <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -356,7 +360,35 @@
                           <td>45</td>
                           <td>Elit</td>
                           <td>100</td>
-                          <td><span class="badge bg-label-success rounded p-2">Yes</span></td>
+                          <td><span class="badge bg-warning rounded p-2">Pending</span></td>
+                          <td><a href="#" class="badge bg-info rounded p-2">Approve</a></td>
+                        </tr>
+                        <tr>
+                          <td>2025-11-08 00:00:01 Am</td>
+                          <td>2025-11-08 00:00:01 Am</td>
+                          <td>20km</td>
+                          <td>10:20pm</td>
+                          <td>10:20pm</td>
+                          <td>10:20pm</td>
+                          <td>24</td>
+                          <td>90</td>
+                          <td>60</td>
+                          <td>30lt</td>
+                          <td>200</td>
+                          <td>2</td>
+                          <td>30</td>
+                          <td>56</td>
+                          <td>28</td>
+                          <td>45</td>
+                          <td>1000</td>
+                          <td>2</td>
+                          <td>56</td>
+                          <td>20h</td>
+                          <td>45</td>
+                          <td>Elit</td>
+                          <td>100</td>
+                          <td><span class="badge bg-success rounded p-2">Approved</span></td>
+                          <td><a href="#" class="badge bg-success rounded p-2">Approved</a></td>
                         </tr>
                       </tbody>
                     </table>
