@@ -306,6 +306,59 @@
                           </div>
                         </div>
                         <p class="mb-0 mt-2 fw-bold fs-5 text-black text-center">DM-LA-11-3356</p>
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+                          <p class="mb-0">AC:</p>
+                          <span class="badge bg-danger rounded p-2">off</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="card p-4 shadow-one rounded-2">
+                        <div class="d-flex flex-column align-items-center justify-content-center position-relative">
+                          <div class="position-relative">
+                            <!-- GAUGE -->
+                            <div style="transform: rotate(270deg)">
+                              <svg width="100%" height="115" viewBox="0 0 200 200">
+                                <defs>
+                                  <radialGradient id="metalGradient">
+                                    <stop offset="0%" stop-color="#999" />
+                                    <stop offset="50%" stop-color="#ccc" />
+                                    <stop offset="100%" stop-color="#666" />
+                                  </radialGradient>
+                                  <radialGradient id="hubGradient">
+                                    <stop offset="0%" stop-color="#e0e0e0" />
+                                    <stop offset="50%" stop-color="#a0a0a0" />
+                                    <stop offset="100%" stop-color="#707070" />
+                                  </radialGradient>
+                                </defs>
+                                <!-- Outer rim -->
+                                <circle cx="100" cy="100" r="98" fill="url(#metalGradient)" />
+                                <circle cx="100" cy="100" r="95" fill="#2a2a2a" />
+                                <circle cx="100" cy="100" r="92" fill="#000" />
+                                <!-- Ticks -->
+                                <g id="ticks"></g>
+                                <!-- Needle -->
+                                <line id="temp-needle" x1="100" y1="100" x2="100" y2="35" stroke="#4A90E2" stroke-width="3" stroke-linecap="round" style="transition: all 0.3s ease-out" />
+                                <!-- Hub -->
+                                <circle cx="100" cy="100" r="8" fill="url(#hubGradient)" />
+                                <circle cx="100" cy="100" r="6" fill="#d0d0d0" />
+                              </svg>
+                            </div>
+                            <!-- CONTROLS -->
+                            <div class="panel">
+                              <div id="tempLabel">20°C</div>
+                              <div class="buttons" style="display: none">
+                                <button class="btn-minus" id="minus">-</button>
+                                <button class="btn-plus" id="plus">+</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="mb-0 mt-2 fw-bold fs-5 text-black text-center">DM-LA-11-3356</p>
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+                          <p class="mb-0">AC:</p>
+                          <span class="badge bg-success rounded p-2">On</span>
+                        </div>
                       </div>
                     </div>
                   </div>
