@@ -686,3 +686,31 @@ canvas {
   background-color: #14a86c;
   color: #212529 !important;
 }
+.filter-multi-select > .viewbar > .selected-items > .item > button {
+  color: #141313 !important;
+  padding: 0px 3px !important;
+}
+.filter-multi-select > .viewbar > .selected-items > .item {
+  display: inline !important;
+  color: #141313 !important;
+  line-height: 16px !important;
+  background: #dddddd !important;
+}
+.filter-multi-select > .dropdown-toggle::before {
+  position: absolute !important;
+  right: 4px !important;
+  top: 50% !important;
+}
+.filter-multi-select .placeholder {
+  background-color: transparent !important;
+}
+.filter-multi-select > .dropdown-menu > .filter > button {
+  right: 1.4rem !important;
+  top: 24px !important;
+}
+.filter-multi-select .dropdown-item {
+  padding: 0.25rem 0.8rem !important;
+}
+.filter-multi-select > .dropdown-menu {
+  overflow-x: hidden;
+}

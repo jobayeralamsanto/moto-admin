@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="./assets/vendor/libs/datatable/buttons.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/filter-multi-select-main/dist/filter_multi_select.css" />
 
     <!-- Helpers -->
     <script src="./assets/vendor/js/helpers.js"></script>
@@ -250,13 +251,11 @@
                     <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 g-2 g-xxl-3">
                       <div class="col">
                         <label class="form-label fw-bold">Vehicle Select</label>
-                        <div class="position-relative">
-                          <select class="js-example-basic-multiple form-select form-select-lg" name="states[]" multiple="multiple">
-                            <option>Vehicle One</option>
-                            <option>Vehicle Two</option>
-                            <option>Vehicle Three</option>
-                          </select>
-                        </div>
+                        <select multiple id="pets" name="pets">
+                          <option value="0">Vehicle One</option>
+                          <option value="1">Vehicle Two</option>
+                          <option value="2">Vehicle Three</option>
+                        </select>
                       </div>
                       <div class="col">
                         <label class="form-label fw-bold">Start Point</label>
@@ -434,6 +433,7 @@
 
     <!-- select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./assets/vendor/libs/filter-multi-select-main/dist/filter-multi-select-bundle.min.js"></script>
 
     <!-- chart  -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>

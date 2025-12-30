@@ -25,7 +25,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/filter-multi-select-main/dist/filter_multi_select.css" />
-    <link rel="stylesheet" href="./assets/js/multipule-select.js" />
     <!-- Helpers -->
     <script src="./assets/vendor/js/helpers.js"></script>
     <script src="./assets/vendor/js/template-customizer.js"></script>
@@ -246,15 +245,15 @@
 
                   <div class="card p-4 shadow-one rounded-2 mb-4">
                     <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-xxl-6 g-2 g-xxl-3">
-                      <!-- <div class="col">
+                      <div class="col">
                         <label class="form-label fw-bold">Vehicle Select</label>
                         <select multiple id="pets" name="pets">
-                          <option value="0">Doge</option>
-                          <option value="1">Keyboard Cat</option>
-                          <option value="2">Badger Badger Badger</option>
+                          <option value="0">Vehicle One</option>
+                          <option value="1">Vehicle Two</option>
+                          <option value="2">Vehicle Three</option>
                         </select>
-                      </div> -->
-                      <div class="col">
+                      </div>
+                      <!-- <div class="col">
                         <label class="form-label fw-bold">Vehicle Select</label>
                         <div class="position-relative">
                           <select class="js-example-basic-multiple form-select form-select-lg" name="states[]" multiple="multiple">
@@ -263,7 +262,7 @@
                             <option>Vehicle Three</option>
                           </select>
                         </div>
-                      </div>
+                      </div> -->
                       <div class="col">
                         <label class="form-label fw-bold">Interval Minute</label>
                         <input type="text" class="form-control" />
@@ -585,11 +584,6 @@
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-    <script>
-      $(function () {
-        $("#pets").filterMultiSelect();
-      });
-    </script>
 
     <script>
       var options = {
