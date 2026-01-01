@@ -772,9 +772,9 @@
       setInterval(fetchTemperatureFromAPI, 2000);
     </script>
 
-    <!-- speed meter chart  -->
+    <!-- speed meter chart -->
     <script>
-      var dataSource = {
+      var speedDataSource = {
         chart: {
           captionpadding: "0",
           origw: "320",
@@ -818,7 +818,6 @@
               items: [
                 {
                   type: "text",
-                  id: "text",
                   text: "km/h",
                   x: "$gaugeCenterX",
                   y: "$gaugeCenterY + 40",
@@ -832,20 +831,20 @@
       };
 
       FusionCharts.ready(function () {
-        var speedChart = new FusionCharts({
+        new FusionCharts({
           type: "angulargauge",
           renderAt: "speed-meter",
           width: "100%",
           height: "100%",
           dataFormat: "json",
-          dataSource,
+          dataSource: speedDataSource,
         }).render();
       });
     </script>
 
-    <!-- fuel meter chart  -->
+    <!-- fuel meter chart -->
     <script>
-      var dataSource = {
+      var fuelDataSource = {
         chart: {
           captionpadding: "0",
           origw: "320",
@@ -877,7 +876,7 @@
         dials: {
           dial: [
             {
-              value: "110",
+              value: "50",
               bgcolor: "#F20F2F",
               basewidth: "8",
             },
@@ -889,7 +888,6 @@
               items: [
                 {
                   type: "text",
-                  id: "text",
                   text: "Ltr",
                   x: "$gaugeCenterX",
                   y: "$gaugeCenterY + 40",
@@ -903,13 +901,13 @@
       };
 
       FusionCharts.ready(function () {
-        var fuelChart = new FusionCharts({
+        new FusionCharts({
           type: "angulargauge",
           renderAt: "fuel-meter",
           width: "100%",
           height: "100%",
           dataFormat: "json",
-          dataSource,
+          dataSource: fuelDataSource,
         }).render();
       });
     </script>
