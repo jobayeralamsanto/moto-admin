@@ -714,3 +714,50 @@ canvas {
 .filter-multi-select > .dropdown-menu {
   overflow-x: hidden;
 }
+.raphael-group-7-background rect {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+.raphael-group-8-background rect {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+.raphael-group-107-background rect {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+.raphael-group-108-background rect {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+svg#raphael-paper-3 {
+  fill: #fff !important;
+}
+[class^="raphael-group-"] g {
+  fill: rgb(255, 255, 255) !important;
+  stroke: rgb(255, 255, 255) !important;
+}
+.meter-name {
+  position: absolute;
+  bottom: 0;
+  width: 92%;
+  height: 30px;
+  text-align: center;
+  background-color: #fff;
+}
+#speed-meter {
+  height: 150px;
+  width: 100%;
+}
+#fuel-meter {
+  height: 150px;
+  width: 100%;
+}
+#speed-meter .raphael-group-15-datalabel text {
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
+#fuel-meter .raphael-group-115-datalabel text {
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
